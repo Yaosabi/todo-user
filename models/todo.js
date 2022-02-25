@@ -12,10 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-  };
+  }
   Todo.init({
     description: DataTypes.STRING,
     complete: DataTypes.BOOLEAN,
+    user_id: DataTypes.INTEGER,
     completeText: {
       type: DataTypes.VIRTUAL,
       get(){
